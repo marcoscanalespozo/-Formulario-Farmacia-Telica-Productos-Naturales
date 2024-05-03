@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Farmacia Telica & Productos Naturales 2024</title>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!--sweet alert-->
+  <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js"></script>
+  <!--fondo de video-->
+  <link rel="stylesheet" type="text/css" href="Fondo video.css">
+  <!--css personalizado-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!--botón de alerta-->
+  <button class="float-left info-btn" onclick="alerta()">Próximamente</button>
+  <script>
+    function alerta() {
+      Swal.fire({
+        title: 'Actualizaciones Futuras!',
+        text: 'Esta es una prueba en versión Beta de la página, por lo tanto su funcionamiento está limitado a la página del formulario, "próximamente versión 4 que agregará la página oficial, "y algo Más"',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
+    }
+  </script>
+
+  <div class="container"><!--se ha colocado el contenedor dentro del body, donde corresponde-->
+    <input type="text" id="search" name="search" placeholder="Buscar producto...">
+    <h1 class="text-center mt-5">Lista de productos</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>N.Producto</th>
+          <th>P.Frasco</th>
+          <th>P.Unidad</th>
+          <th>Cantidad</th>
+          <th>Clasificacion</th>
+          <th>Vencimiento</th>
+          <th>Laboratorio</th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr>
+          <td>Regulador de ovarios</td>
+          <td>100</td>
+          <td>2</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>17/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Pulmon sano</td>
+          <td>88</td>
+          <td>2</td>
+          <td>4</td>
+          <td>capsula</td>
+          <td>22/07/24</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Carminativo</td>
+          <td>100</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>21/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Arnica</td>
+          <td>100</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>18/05/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Control menospausico</td>
+          <td>130</td>
+          <td>2.50</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>10/02/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Jengibre</td>
+          <td>100</td>
+          <td>2</td>
+          <td>4</td>
+          <td>Capsula</td>
+          <td>14/07/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Castaña de la india</td>
+          <td>138</td>
+          <td>2.50</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>06/12/25</td>
+          <td>Natural vida</td>
+        </tr>
+        <tr>
+          <td>Uña de gato</td>
+          <td>100</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>07/10/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Regulador Hormonal</td>
+          <td>137</td>
+          <td>2.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>31/10/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Ginseng+Gingob+Multiv</td>
+          <td>138</td>
+          <td>2.50</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>09/02/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Prostatin Plus</td>
+          <td>138</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/03/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Espino Blanco</td>
+          <td>138</td>
+          <td>2</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>25/10/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Artri Reuma</td>
+          <td>150</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>05/08/25</td>
+          <td>Natural vida</td>
+        </tr>
+        <tr>
+          <td>Cardo Mariano</td>
+          <td>100</td>
+          <td>-</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>01/02/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Trigliceridos</td>
+          <td>85</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/12/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Quina</td>
+          <td>100</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>02/03/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Colitis Plus</td>
+          <td>100</td>
+          <td>-</td>
+          <td>4</td>
+          <td>Capsula</td>
+          <td>01/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Cancerina</td>
+          <td>80</td>
+          <td>-</td>
+          <td>6</td>
+          <td>Capsula</td>
+          <td>03/10/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Zarzaparrilla</td>
+          <td>100</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>16/08/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Oxigenador cerebral</td>
+          <td>140</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>20/01/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Chanca Renal</td>
+          <td>100</td>
+          <td>2</td>
+          <td>4</td>
+          <td>Capsula</td>
+          <td>09/09/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Diabefin</td>
+          <td>100</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>29/03/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Hombre Grande</td>
+          <td>100</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>29/03/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Dolo Riñon</td>
+          <td>100</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>12/12/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Anti Alergico</td>
+          <td>100</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>18/01/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Nogal Negro</td>
+          <td>100</td>
+          <td>2</td>
+          <td>3</td>
+          <td>Capsula</td>
+          <td>03/03/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Relax Plus</td>
+          <td>100</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>12/01/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Cardio Fin</td>
+          <td>138</td>
+          <td>2.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>03/01/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Tiroidin</td>
+          <td>100</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/02/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Moringa</td>
+          <td>100</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>06/09/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Tos y Sinusitis Alergica</td>
+          <td>100</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Acido Urico</td>
+          <td>100</td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>09/02/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Carbon Activado</td>
+          <td>100</td>
+          <td>2</td>
+          <td>5</td>
+          <td>Capsula</td>
+          <td>21/09/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Pylorifin</td>
+          <td>130</td>
+          <td>2.50</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>25/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Cola de Caballo</td>
+          <td>100</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>03/01/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Miomafin</td>
+          <td>138</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>17/11/24</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Anti Miomas</td>
+          <td>125</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>05/08/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>C berri Jugo</td>
+          <td>414</td>
+          <td>-</td>
+          <td>4</td>
+          <td>Jarabe</td>
+          <td>01/09/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Gripxilt 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>22/12/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Anti Anemico 240ml</td>
+          <td>128</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>20/01/26</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Gluconat 240ml</td>
+          <td>154</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>01/03/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Cuculmeca 120ml</td>
+          <td>74</td>
+          <td>-</td>
+          <td>9</td>
+          <td>Jarabe</td>
+          <td>01/03/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Gripe Tos 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>5</td>
+          <td>Jarabe</td>
+          <td>01/07/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Bronco Bomba 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>5</td>
+          <td>Jarabe</td>
+          <td>01/06/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Hepa Forte 120ml</td>
+          <td>83</td>
+          <td>-</td>
+          <td>5</td>
+          <td>Jarabe</td>
+          <td>01/02/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Cerebral 240ml</td>
+          <td>198</td>
+          <td>-</td>
+          <td>4</td>
+          <td>Jarabe</td>
+          <td>01/07/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Cerebral 120ml</td>
+          <td>104</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>01/01/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Guayabina 120ml</td>
+          <td>80</td>
+          <td>-</td>
+          <td>5</td>
+          <td>Jarabe</td>
+          <td>01/02/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Hepa forte 120ml</td>
+          <td>83</td>
+          <td>-</td>
+          <td>9</td>
+          <td>Jarabe</td>
+          <td>01/02/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Elixir Brinquial 120ml</td>
+          <td>104</td>
+          <td>-</td>
+          <td>11</td>
+          <td>Jarabe</td>
+          <td>01/04/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Alerxilt 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Jarabe</td>
+          <td>19/12/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Zarzaparrilla 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>7</td>
+          <td>Jarabe</td>
+          <td>01/09/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Zarzaparrilla 240ml</td>
+          <td>154</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>01/05/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Jengi Forte 120ml</td>
+          <td>88</td>
+          <td>-</td>
+          <td>8</td>
+          <td>Jarabe</td>
+          <td>01/03/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Cicatrixilt gel 120ml</td>
+          <td>143</td>
+          <td>-</td>
+          <td>1</td>
+          <td>pmo</td>
+          <td>01/05/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Detoxilt 240ml</td>
+          <td>150</td>
+          <td>-</td>
+          <td>5</td>
+          <td>Jarabe</td>
+          <td>15/10/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Moringabe 240ml</td>
+          <td>150</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>01/06/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Migraxilt 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>01/06/24</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Uña de gato+Zarzaparrilla 240ml</td>
+          <td>115</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>27/07/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Estreñixilt 240ml</td>
+          <td>150</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>15/10/24</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Pulmonxilt 120ml</td>
+          <td>66</td>
+          <td>-</td>
+          <td>4</td>
+          <td>Jarabe</td>
+          <td>08/03/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Osteoporoxilt 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Jarabe</td>
+          <td>12/04/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Plata coloidal 120ml</td>
+          <td>70</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>11/03/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Gripxilt 120ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Jarabe</td>
+          <td>22/12/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Aceite de coco 60ml</td>
+          <td>75</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Jarabe</td>
+          <td>26/04/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Flor de tilo - <i>Vitrina</i></td>
+          <td>163</td>
+          <td>2.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>29/11/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Colon clean - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>4</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/07/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Ginseng+gingo+multivitaminas - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>4</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>09/02/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Higado Graso - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>1.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>22/10/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Arnica - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>2</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>18/05/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Prostan - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>6</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/06/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Carbon Activado - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>2</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>21/09/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Quina - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>2</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>02/03/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Fibra forma plus - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>4</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/10/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Hepa forte - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>3.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/01/27</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Ajo - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>3</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/06/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Echinacea 30cap - <i>Vitrina</i></td>
+          <td>138</td>
+          <td>5</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/02/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Canela 30cap - <i>vitrina</i></td>
+          <td>77</td>
+          <td>3</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/06/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Curcuma 30cap - <i>Vitrina</i></td>
+          <td>71</td>
+          <td>2.50</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/06/24</td>
+          <td>Natural herbal</td>
+        </tr>
+        <tr>
+          <td>Maca 30cap - <i>Vitrina</i></td>
+          <td>77</td>
+          <td>6</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/05/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Ajenjo 30cap - <i>Vitrina</i></td>
+          <td>83</td>
+          <td>3</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/11/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Valeriana 30cap - <i>Vitrina</i></td>
+          <td><i>Comenzado</i></td>
+          <td>3</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/06/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Gotu kola 30cap - <i>Vitrina</i></td>
+          <td>99</td>
+          <td>3.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/12/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Fenogreco 30cap - <i>Vitrina</i></td>
+          <td>89</td>
+          <td>3.50</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/05/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Valeriana 30cap - <i>Vitrina</i></td>
+          <td>82</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Capsula</td>
+          <td>01/06/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Drenal - <i>Cja</i></td>
+          <td>218</td>
+          <td>4</td>
+          <td>6</td>
+          <td>Capsula</td>
+          <td>01/08/24</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Fibra forma plus - <i>Cja</i></td>
+          <td>205</td>
+          <td>3.50</td>
+          <td>6</td>
+          <td>Capsula</td>
+          <td>01/01/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Sistema Circulatorio - <i>Cja</i></td>
+          <td>179</td>
+          <td>3.50</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/11/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Cerebral - <i>Cja</i></td>
+          <td>304</td>
+          <td>5.50</td>
+          <td>2</td>
+          <td>Capsula</td>
+          <td>01/10/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Fibra linopal</td>
+          <td>100</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Fibra</td>
+          <td>01/03/26</td>
+          <td>Natural Herbal</td>
+        </tr>
+        <tr>
+          <td>Limpia riñon</td>
+          <td>100</td>
+          <td>-</td>
+          <td>2</td>
+          <td>Fibra</td>
+          <td>01/11/25</td>
+          <td>Natural Vida</td>
+        </tr>
+        <tr>
+          <td>Fibra forma</td>
+          <td>130</td>
+          <td>-</td>
+          <td>1</td>
+          <td>Fibra</td>
+          <td>01/03/25</td>
+          <td>Natural Herbal</td>
+        </tr>
+        
+        <!--Agregar más filas aquí-->
+      </tbody>
+      </div>
+
+      <video autoplay muted loop id="myVideo">
+        <source src="Fondos.mp4" type="video/mp4">
+        <source src="video.ogv" type="video/ogg">
+        <source src="video.webm" type="video/webm">
+      </video>
+
+
+      <script src="script.js"></script>
+      <script>
+        const searchInput = document.querySelector('#search');
+        const rows = document.querySelectorAll('tbody tr');
+
+        searchInput.addEventListener('keyup', function () {
+          const searchTerm = searchInput.value.toLowerCase();
+
+          rows.forEach(row => {
+            const product = row.children[0].textContent.toLowerCase();
+            const lab = row.children[1].textContent.toLowerCase();
+            const distributor = row.children[2].textContent.toLowerCase();
+
+            if (product.includes(searchTerm) || lab.includes(searchTerm) || distributor.includes(searchTerm)) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      </script>
+</body>
+</html>
